@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+
+>
+<!--<bean id="doctor" class="com.example.demo.Doctor">-->
+<!--    <constructor-arg   value="MBBS"></constructor-arg>-->
+<!--    <property name="qualification" value="MBBS"></property>-->
+<!--&lt;!&ndash;   <property name="nurse" ref="com.example.demo.Nurse"></property>&ndash;&gt;-->
+<!--</bean>-->
+<!--<bean id="nurse" class="com.example.demo.Nurse"></bean>-->
+<!--    &lt;!&ndash; bean definitions here &ndash;&gt;-->
+    <context:component-scan base-package="com.example.demo"></context:component-scan>
+</beans>
+<!-- telling the spring what  how to create the objects -->

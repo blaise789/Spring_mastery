@@ -1,0 +1,11 @@
+how spring works
+spring creates the objects itself
+bean lifecyle
+define beans
+spring instantiate the beans
+add values to the properties of the beans  scopes
+post initialization process
+bean is initialized dependency injection occurs then bean is available in the container
+predesturialize custom logic
+bean destruction from jvm
+implementation of bean lifecycle in

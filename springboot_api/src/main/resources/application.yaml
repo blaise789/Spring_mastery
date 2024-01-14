@@ -1,0 +1,62 @@
+server:
+  port: 5000
+
+spring:
+  profiles:
+    active: qa
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/departments
+    username: root
+    password: Blaise@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+welcome:
+  message: Welcome To daily code with blaise
+
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/departments_qa
+    username: root
+    password: Blaise@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+welcome:
+    message: Welcome To daily code with blaise
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+#        exposing all the end points of the actuator
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/departments_prod
+    username: root
+    password: Blaise@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+welcome:
+  message: Welcome To daily code with blaise

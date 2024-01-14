@@ -1,0 +1,15 @@
+package com.codedailyblaise.springboot.tutorial.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+    @Value("${welcome.message}")
+    public String helloMessage;
+    @GetMapping("/departments/hello")
+    public String helloMessage(){
+        return  helloMessage;
+    }
+}
